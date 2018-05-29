@@ -31,38 +31,41 @@ body {
 	overflow: hidden;
 }
 
+.menu {
+	width: 27vw;
+    height: 36vw;
+}
 .container { 
-  width: 700px;
-  height: 900px;
-  position: relative;
-  perspective: 800px;
-  margin: 50px auto;
+    width: 26vw;
+    height: 33vw;
+    position: relative;
+    margin: 5vw auto;
 }
 
 .pizza {
-    width: 145px;
+    width: 5vw;
     position: absolute;
-    top: 140px;
-    left: 71px;
+    top: 6vw;
+    left: 3vw;
 }
 
 .dolma {
-	width: 145px;
+	width: 5vw;
     position: absolute;
-    top: 373px;
-    left: 71px;    
+    top: 16vw;
+    left: 3vw;   
 }
 
 .croissant {
-	width: 145px;
+	width: 5vw;
     position: absolute;
-    top: 637px;
-    left: 71px;
+    top: 26vw;
+    left: 3vw; 
 }
 
 #card {
-  width: 100%;
-  height: 100%;
+    width: 27vw;
+    height: 36vw;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -72,13 +75,13 @@ body {
   margin: 0;
   display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
+    width: 27vw;
+    height: 36vw;
   backface-visibility: hidden;
 }
 
 #card .front {
-  background: green;
+  /*background: green;*/
 }
 
 #card .back {
@@ -90,11 +93,14 @@ body {
 }
 
 #start {
-	width: 260px;
-	height: 106px;
 	position: absolute;
-	top: 440px;
-	left: 220px;
+    top: 17vw;
+    left: 8vw;
+}
+
+.startimg {
+	 width: 12vw;
+    height: 5vw;
 }
 
 #start:hover, .pizza:hover, .dolma:hover, .croissant:hover {
