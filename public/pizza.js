@@ -33,25 +33,9 @@ $(document).ready(function () {
 				}, 700);
 			}
 
-			/*function enter() {
-				var input = document.getElementById("textbox");
-				input.addEventListener("keyup", function (event) {
-					event.preventDefault();
-					if (event.keyCode === 13) {
-						document.getElementById("submit").click();
-					}
-				});
-			}*/
-			/*$(document).keypress(function (e) {
-				if (e.which == 13) {
-					$('#submit').click();
-				}
-			});
-			enter();*/
-
 			function question2() {
 				level1.append("<div class='questionBox withAnimation' id = 'question'>" +
-					"<h2>Տոմաաա՜տ, տոմատ է պակասում։ <br>Հարց 2. Գիտենք, որ տոմատ պետք է քսել եզրերից 3 սմ հեռավորության վրա։ Ինչքա՞ն կլինի տոմատով պատված մասի շառավիղը:</h2>" + "</br>" + "</br>" +
+					"<h2>Տոմաաա՜տ, տոմատ է պակասում։  Գիտենք, որ տոմատ պետք է քսել եզրերից 3 սմ հեռավորության վրա։ <br>Հարց 2. Ինչքա՞ն կլինի տոմատով պատված մասի շառավիղը:</h2>" + "</br>" + "</br>" +
 					"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 					"</div>");
 
@@ -103,7 +87,7 @@ $(document).ready(function () {
 							}
 							function question4() {
 								level1.append("<div class='questionBox' id = 'question'>" +
-									"<h2>Հարց 3. Հաշվիր նաև պիցցայի մակերեսը ու վերջ: <br>Ընդունել, որ π = 3:</h2>" + "</br>" + "</br>" +
+									"<h2> Հաշվիր նաև պիցցայի մակերեսը ու վերջ: <br>Ընդունել, որ π = 3:</h2>" + "</br>" + "</br>" +
 									"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 									"</div>");
 								$("#submit").on("click", function () {
