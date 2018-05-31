@@ -12,9 +12,21 @@ $(document).ready(function () {
 	function question1() {
 		level1.append("<div class='questionBox withAnimation' id = 'question'>" +
 			"<h2>Կրուասանի խմորը պետք է լինի եռանկյունաձև, այնպես չէ՞։ <br>Հարց 1. Ասա քառակուսու կողմի միջնակետի կոորդինատները, եթե կողմի ծայրակետերի կոորդինատներն են ` (2,1) և (4,3):</h2>" + "</br>" + "</br>" + "<form>" +
-			"<input class = 'textbox' id = 'x'  type = 'text'  placeholder='x..' autocomplete='off'>" + "<div class = 'divider'></div>" + "<input class = 'textbox' id = 'y' type = 'text'  placeholder='y..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" + "</form>" +
+			"<input class = 'textbox' id = 'x'  type = 'text' maxlength = '1'  placeholder='x..' autocomplete='off'>" + "<div class = 'divider'></div>" + "<input class = 'textbox' id = 'y' type = 'text'  placeholder='y..' autocomplete='off' maxlength = '1'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" + "</form>" +
 			"</div>");
-
+					$('#x').focus();
+					$('#x').one( "keyup", function() {
+					 var value = $('#x').val().length;
+					 if (value == 1) {
+						 $('#x').blur();
+						 $('#y').focus();
+					 } 
+					});
+					 $(document).bind('keypress', function(e) {
+						if(e.keyCode==13){
+                 $('#submit').trigger('click');
+					}
+						});
 		$("#submit").click(function () {
 			if ($.trim($('#x').val()) === '3' && $.trim($('#y').val()) === '2') {
 				$('#question').detach();
@@ -26,6 +38,9 @@ $(document).ready(function () {
 			}
 			else if ($.trim($('#x').val()) !== '3' && $.trim($('#y').val()) !== '2') {
 				$('.textbox').css('color', '#D11F1D');
+				$('#y').blur();
+				 $('#x').focus();
+
 				setTimeout(function () {
 					$('#x').val('');
 					$('#y').val('');
@@ -35,6 +50,7 @@ $(document).ready(function () {
 			}
 			else if ($.trim($('#x').val()) === '3' && $.trim($('#y').val()) !== '2') {
 				$('#y').css('color', '#D11F1D');
+				$('#y').focus();
 				setTimeout(function () {
 					$('#y').val('');
 					$('#y').css('color', 'black');
@@ -42,24 +58,19 @@ $(document).ready(function () {
 			}
 			else if ($.trim($('#x').val()) !== '3' && $.trim($('#y').val()) === '2') {
 				$('#x').css('color', '#D11F1D');
+				$('#x').focus();
 				setTimeout(function () {
 					$('#x').val('');
 					$('#x').css('color', 'black');
 				}, 700);
 			}
-					/*	$(document).keypress(function (e) {
-				if (e.which == 13) {
-					$('#submit').click();
-					return false;
-				}
-			});*/
 
 			function question2() {
 				level1.append("<div class='questionBox withAnimation' id = 'question'>" +
 					"<h2>Ավելացնենք շոկոլադ: Հայտնի է, որ տասը կրուասանի համար պետք է 300 գրամ շոկոլադ: <br>Հարց 2. Ինչքա՞ն շոկոլադ է պետք 1 կրուասանի համար: </h2>" + "</br>" + "</br>" +
 					"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 					"</div>");
-
+						$('#textbox').focus();
 				$("#submit").on("click", function () {
 					if ($.trim($('#textbox').val()) === '30') {
 						$('#question').detach();
@@ -85,6 +96,7 @@ $(document).ready(function () {
 							"<h2>Եռանկյունաձեւ խմորի մակերեսը ստացվել է 75 սմ<sup>2</sup> է: Փաթաթելուց հետո մակերեսը փոքրանում է 3 անգամ: <br>Հարց 3. Ինչքա՞ն կդառնա խմորի մակերեսը:</h2>" + "</br>" + "</br>" +
 							"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 							"</div>");
+									$('#textbox').focus();
 						$("#submit").on("click", function () {
 							if ($.trim($('#textbox').val()) === '25') {
 								$('#question').detach();
@@ -132,7 +144,7 @@ $(document).ready(function () {
 										window.location.href = 'index.html';
 
 									});
-								}, 3800);
+								}, 2500);
 
 
 							}

@@ -11,9 +11,15 @@ $(document).ready(function () {
 
 	function question1() {
 		level1.append("<div class='questionBox withAnimation' id = 'question'>" +
-			"<h2>Ուզու՞մ ես պատրաստել իտալական պիցցա, ուրեմն պատասխանիր մի քանի հարցերի մաթեմատիկայից: <br>Պիցցայի խմորը պետք է շրջանագծի տեսք ունենա, այնպես չէ՞։ <br>Հարց 1. Ասա ինչքան պետք է լինի շառավիղը, եթե շրջանագծի հավասարումն է` x<sup>2</sup> + y<sup>2</sup> = 400:</h2>" + "</br>" + "</br>" + "<form>" +
-			"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" + "</form>" +
+			"<h2>Ուզու՞մ ես պատրաստել իտալական պիցցա, ուրեմն պատասխանիր մի քանի հարցերի մաթեմատիկայից: <br>Պիցցայի խմորը պետք է շրջանագծի տեսք ունենա, այնպես չէ՞։ <br>Հարց 1. Ասա ինչքան պետք է լինի շառավիղը, եթե շրջանագծի հավասարումն է` x<sup>2</sup> + y<sup>2</sup> = 400:</h2>" + "</br>" + "</br>" +
+			"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off' >" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 			"</div>");
+					$('#textbox').focus();
+				  $(document).bind('keypress', function(e) {
+						if(e.keyCode==13){
+                 $('#submit').trigger('click');
+					}
+						});
 
 		$("#submit").click(function () {
 			if ($.trim($('#textbox').val()) === '20') {
@@ -36,9 +42,9 @@ $(document).ready(function () {
 			function question2() {
 				level1.append("<div class='questionBox withAnimation' id = 'question'>" +
 					"<h2>Տոմաաա՜տ, տոմատ է պակասում։  Գիտենք, որ տոմատ պետք է քսել եզրերից 3 սմ հեռավորության վրա։ <br>Հարց 2. Ինչքա՞ն կլինի տոմատով պատված մասի շառավիղը:</h2>" + "</br>" + "</br>" +
-					"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
+					"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off' >" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 					"</div>");
-
+						$('#textbox').focus();
 				$("#submit").on("click", function () {
 					if ($.trim($('#textbox').val()) === '17') {
 						$('#question').detach();
@@ -64,7 +70,7 @@ $(document).ready(function () {
 							"<h2> Կարծես թե պիցցան մեծ է ստացվում։ 8 հոգով կուտենք։<br> Հարց 3. Ինչքա՞ն պանիր է անհրաժեշտ, եթե ամեն մի մասի համար օգտագործվում է 30 գրամ պանիր:</h2>" + "</br>" + "</br>" +
 							"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 							"</div>");
-
+								$('#textbox').focus();
 						$("#submit").on("click", function () {
 							if ($.trim($('#textbox').val()) === '240') {
 								$('#question').detach();
@@ -90,6 +96,7 @@ $(document).ready(function () {
 									"<h2> Հաշվիր նաև պիցցայի մակերեսը ու վերջ: <br>Ընդունել, որ π = 3:</h2>" + "</br>" + "</br>" +
 									"<input id = 'textbox' type = 'text'  placeholder='Պատասխան..' autocomplete='off'>" + "<input type='button' value= 'Հաստատել' id = 'submit'>" +
 									"</div>");
+											$('#textbox').focus();
 								$("#submit").on("click", function () {
 									if ($.trim($('#textbox').val()) === '1200') {
 										$('#question').detach();
@@ -120,7 +127,7 @@ $(document).ready(function () {
 												window.location.href = 'index.html';
 
 											});
-										}, 2000);
+										}, 2500);
 
 
 									}
@@ -143,7 +150,7 @@ $(document).ready(function () {
 				});
 			}
 		});
-	};
+	}
 });
 
 
