@@ -24,48 +24,49 @@ time, mark, audio, video,svg {
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background-image: url("bg.jpg");
-	background-size: 50%;
-	overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 }
 
 .menu {
-	width: 27vw;
-    height: 36vw;
+    width: 100%;
 }
+    
 .container { 
-    width: 26vw;
-    height: 33vw;
+    width: 73vh;
     position: relative;
-    margin: 5vw auto;
+    margin: 3vh auto;
 }
 
 .pizza {
-    width: 5vw;
+    width: 11vh;
     position: absolute;
-    top: 6vw;
-    left: 3vw;
+    top: 18vh;
+    left: 8vh;
 }
 
 .dolma {
-	width: 5vw;
+    width: 11vh;
     position: absolute;
-    top: 16vw;
-    left: 3vw;   
+    top: 44vh;
+    left: 8vh;
 }
 
 .croissant {
-	width: 5vw;
+    width: 11vh;
     position: absolute;
-    top: 26vw;
-    left: 3vw; 
+    top: 72vh;
+    left: 8vh;
 }
 
 #card {
-    width: 27vw;
-    height: 36vw;
+    width: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -75,8 +76,7 @@ body {
   margin: 0;
   display: block;
   position: absolute;
-    width: 27vw;
-    height: 36vw;
+    width: 100%;
   backface-visibility: hidden;
 }
 
@@ -93,14 +93,12 @@ body {
 }
 
 #start {
-	position: absolute;
-    top: 17vw;
-    left: 8vw;
+    position: absolute;
+    top: 47vh;
+    left: 32%;
 }
-
 .startimg {
-	 width: 12vw;
-    height: 5vw;
+    width: 25vh;
 }
 
 #start:hover, .pizza:hover, .dolma:hover, .croissant:hover {
@@ -113,28 +111,37 @@ body {
    width:100%;
    height: 100vh;
    position: relative;
+   text-align: center;
 }
 .questionBox {
     background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    left: 30vw;
-    top: 9vw;
+    /*position: relative;
+    bottom: 38vh;
     z-index: 1;
-    width: 40vw;
-    height: 33vw;
-    padding: 4vw;
-    font-size: 1vw;
+    width: 64vh;
+    padding: 4vh;
+    font-size: 2vh;
+    margin: auto;*/
+    position: absolute;
+    bottom: 23vh;
+    z-index: 1;
+    width: 77vh;
+    padding: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 2vh;
+    height: 50vh;
 }
-
+/*
 .foodImages {
-    width: 30vw;
+    width: 56vh;
     top: 6vh;
-    left: 35vw;
-    z-index: 1;
-    position: absolute;
+    position: relative;
     cursor: pointer;
 }
-
+*/
 .withAnimation {
     -webkit-animation: showAndMoveUpKeyFrame .6s ease both;
     animation: showAndMoveUpKeyFrame .6s ease both;
@@ -151,34 +158,38 @@ body {
 
 h2{
     color:white;
+    text-align:center;
 	
 }
 
 #textbox {
     border: 0vh solid #ccc;
+
+
+
 }
-#submit {
+/*#submit {
     background-color: #81a5ac;
     color: white;
     margin: 1vw 0;
     border: none;
-}
+
+}*/
 
 #submit, #textbox  {
-    width: 32vw;
-    padding: 1vw 3vw;
+    width: 53vh;
+    padding: 1.5vh 3vh;
     display: inline-block;
-    border-radius: 1vw;
+    border-radius: 7px;
     box-sizing: border-box;
-    font-size: 2vw;
+    font-size: 3vh;
     overflow: hidden;
     outline: none;
     cursor: pointer;
-
-
+    text-align: center;
 }
 
-.textbox {
+/*.textbox {
     width: 5.2vw;
     padding: 1vw 2vw;
     display: inline-block;
@@ -190,14 +201,14 @@ h2{
     outline: none;
     color: black;
 
-}
+}*/
 
-.divider{
+/*.divider{
     width:21vw;
     height:auto;
     display:inline-block;
 }
-
+*/
 
 #submit:hover {
     background-color: #356e7a;
@@ -316,14 +327,14 @@ input[type=button]:focus {
 
 
 
-#icon {
+/*#icon {
     left: 80vw;
     position:  absolute;
     top: 2vw;
     opacity: 0.5;
     width:4vw;
     cursor:pointer;
-}
+}*/
 
 #icon1 {
     left: 94vw;
